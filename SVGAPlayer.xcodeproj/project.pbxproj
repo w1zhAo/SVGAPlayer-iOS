@@ -44,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		1DDA5FF396660C7C932DF9B8 /* libPods-SVGAPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SVGAPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20EB5E3B2BEA179400CCF9C1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
+		20EB5E3C2BEA179E00CCF9C1 /* SVGAPlayer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SVGAPlayer.podspec; sourceTree = SOURCE_ROOT; };
 		63712E6421787950001AE014 /* heartbeat.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = heartbeat.svga; sourceTree = "<group>"; };
 		63712E6621787A45001AE014 /* SVGAAudioEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGAAudioEntity.h; sourceTree = "<group>"; };
 		63712E6721787A45001AE014 /* SVGAAudioEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGAAudioEntity.m; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				90A676EE1D13A6DF008A69F3 /* LaunchScreen.storyboard */,
 				90A676F11D13A6DF008A69F3 /* Info.plist */,
 				90CB64F81EF297E800DAA382 /* SVGAPlayer React-Info.plist */,
+				20EB5E3C2BEA179E00CCF9C1 /* SVGAPlayer.podspec */,
 				90A676E01D13A6DF008A69F3 /* Supporting Files */,
 			);
 			path = SVGAPlayer;
@@ -161,6 +164,7 @@
 		90A676E01D13A6DF008A69F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				20EB5E3B2BEA179400CCF9C1 /* PrivacyInfo.xcprivacy */,
 				90A676E11D13A6DF008A69F3 /* main.m */,
 			);
 			name = "Supporting Files";
