@@ -31,5 +31,5 @@ Pod::Spec.new do |s|
     }
   end
   
-  s.resource_bundles{'SVGAPlayer' => ['Source/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'SVGAPlayer' => ['Source/PrivacyInfo.xcprivacy']}
 end
