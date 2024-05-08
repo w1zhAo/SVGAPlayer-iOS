@@ -585,29 +585,49 @@ void SVGAProtoShapeEntity_ClearArgsOneOfCase(SVGAProtoShapeEntity *message) {
 }
 #pragma mark - Enum SVGAProtoShapeEntity_ShapeType
 
+//GPBEnumDescriptor *SVGAProtoShapeEntity_ShapeType_EnumDescriptor(void) {
+//    static GPBEnumDescriptor *descriptor = NULL;
+//    if (!descriptor) {
+//        static const char *valueNames =
+//        "Shape\000Rect\000Ellipse\000Keep\000";
+//        static const int32_t values[] = {
+//            SVGAProtoShapeEntity_ShapeType_Shape,
+//            SVGAProtoShapeEntity_ShapeType_Rect,
+//            SVGAProtoShapeEntity_ShapeType_Ellipse,
+//            SVGAProtoShapeEntity_ShapeType_Keep,
+//        };
+//        GPBEnumDescriptor *worker =
+//        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeType)
+//                                       valueNames:valueNames
+//                                           values:values
+//                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+//                                     enumVerifier:SVGAProtoShapeEntity_ShapeType_IsValidValue];
+//        if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+//            [worker release];
+//        }
+//    }
+//    return descriptor;
+//}
 GPBEnumDescriptor *SVGAProtoShapeEntity_ShapeType_EnumDescriptor(void) {
-    static GPBEnumDescriptor *descriptor = NULL;
-    if (!descriptor) {
-        static const char *valueNames =
-        "Shape\000Rect\000Ellipse\000Keep\000";
+    static GPBEnumDescriptor *descriptor = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        static const char *valueNames =  "Shape\000Rect\000Ellipse\000Keep\000";
         static const int32_t values[] = {
             SVGAProtoShapeEntity_ShapeType_Shape,
             SVGAProtoShapeEntity_ShapeType_Rect,
             SVGAProtoShapeEntity_ShapeType_Ellipse,
             SVGAProtoShapeEntity_ShapeType_Keep,
         };
-        GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeType)
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:SVGAProtoShapeEntity_ShapeType_IsValidValue];
-        if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
-            [worker release];
-        }
-    }
+        descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineCap)
+                                                    valueNames:valueNames
+                                                        values:values
+                                                         count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                                  enumVerifier:SVGAProtoShapeEntity_ShapeType_IsValidValue];
+    });
     return descriptor;
 }
+
 
 BOOL SVGAProtoShapeEntity_ShapeType_IsValidValue(int32_t value__) {
     switch (value__) {
@@ -1003,30 +1023,52 @@ void SetSVGAProtoShapeEntity_ShapeStyle_LineJoin_RawValue(SVGAProtoShapeEntity_S
 
 #pragma mark - Enum SVGAProtoShapeEntity_ShapeStyle_LineCap
 
+//GPBEnumDescriptor *SVGAProtoShapeEntity_ShapeStyle_LineCap_EnumDescriptor(void) {
+//    static GPBEnumDescriptor *descriptor = NULL;
+//    if (!descriptor) {
+//        static const char *valueNames =
+//        "LineCapButt\000LineCapRound\000LineCapSquare\000";
+//        static const int32_t values[] = {
+//            SVGAProtoShapeEntity_ShapeStyle_LineCap_LineCapButt,
+//            SVGAProtoShapeEntity_ShapeStyle_LineCap_LineCapRound,
+//            SVGAProtoShapeEntity_ShapeStyle_LineCap_LineCapSquare,
+//        };
+//        static const char *extraTextFormatInfo = "\003\000\007\344\000\001\007\345\000\002\007\346\000";
+//        GPBEnumDescriptor *worker =
+//        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineCap)
+//                                       valueNames:valueNames
+//                                           values:values
+//                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+//                                     enumVerifier:SVGAProtoShapeEntity_ShapeStyle_LineCap_IsValidValue
+//                              extraTextFormatInfo:extraTextFormatInfo];
+//        if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+//            [worker release];
+//        }
+//    }
+//    return descriptor;
+//}
 GPBEnumDescriptor *SVGAProtoShapeEntity_ShapeStyle_LineCap_EnumDescriptor(void) {
-    static GPBEnumDescriptor *descriptor = NULL;
-    if (!descriptor) {
-        static const char *valueNames =
-        "LineCapButt\000LineCapRound\000LineCapSquare\000";
+    static GPBEnumDescriptor *descriptor = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        static const char *valueNames =  "LineCapButt\000LineCapRound\000LineCapSquare\000";
         static const int32_t values[] = {
             SVGAProtoShapeEntity_ShapeStyle_LineCap_LineCapButt,
             SVGAProtoShapeEntity_ShapeStyle_LineCap_LineCapRound,
             SVGAProtoShapeEntity_ShapeStyle_LineCap_LineCapSquare,
         };
         static const char *extraTextFormatInfo = "\003\000\007\344\000\001\007\345\000\002\007\346\000";
-        GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineCap)
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:SVGAProtoShapeEntity_ShapeStyle_LineCap_IsValidValue
-                              extraTextFormatInfo:extraTextFormatInfo];
-        if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
-            [worker release];
-        }
-    }
+        descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineCap)
+                                                    valueNames:valueNames
+                                                        values:values
+                                                         count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                                  enumVerifier:SVGAProtoShapeEntity_ShapeStyle_LineCap_IsValidValue
+                                           extraTextFormatInfo:extraTextFormatInfo];
+    });
     return descriptor;
 }
+
+
 
 BOOL SVGAProtoShapeEntity_ShapeStyle_LineCap_IsValidValue(int32_t value__) {
     switch (value__) {
@@ -1040,32 +1082,53 @@ BOOL SVGAProtoShapeEntity_ShapeStyle_LineCap_IsValidValue(int32_t value__) {
 }
 
 #pragma mark - Enum SVGAProtoShapeEntity_ShapeStyle_LineJoin
-
+//
+//GPBEnumDescriptor *SVGAProtoShapeEntity_ShapeStyle_LineJoin_EnumDescriptor(void) {
+//    static GPBEnumDescriptor *descriptor = NULL;
+//    if (!descriptor) {
+//        static const char *valueNames =
+//        "LineJoinMiter\000LineJoinRound\000LineJoinBeve"
+//        "l\000";
+//        static const int32_t values[] = {
+//            SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinMiter,
+//            SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinRound,
+//            SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinBevel,
+//        };
+//        static const char *extraTextFormatInfo = "\003\000\010\345\000\001\010\345\000\002\010\345\000";
+//        GPBEnumDescriptor *worker =
+//        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineJoin)
+//                                       valueNames:valueNames
+//                                           values:values
+//                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+//                                     enumVerifier:SVGAProtoShapeEntity_ShapeStyle_LineJoin_IsValidValue
+//                              extraTextFormatInfo:extraTextFormatInfo];
+//        if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+//            [worker release];
+//        }
+//    }
+//    return descriptor;
+//}
 GPBEnumDescriptor *SVGAProtoShapeEntity_ShapeStyle_LineJoin_EnumDescriptor(void) {
-    static GPBEnumDescriptor *descriptor = NULL;
-    if (!descriptor) {
-        static const char *valueNames =
-        "LineJoinMiter\000LineJoinRound\000LineJoinBeve"
-        "l\000";
+    static GPBEnumDescriptor *descriptor = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        static const char *valueNames = "LineJoinMiter\000LineJoinRound\000LineJoinBeve" "l\000";
         static const int32_t values[] = {
             SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinMiter,
             SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinRound,
-            SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinBevel,
+            SVGAProtoShapeEntity_ShapeStyle_LineJoin_LineJoinBevel
         };
         static const char *extraTextFormatInfo = "\003\000\010\345\000\001\010\345\000\002\010\345\000";
-        GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineJoin)
-                                       valueNames:valueNames
-                                           values:values
-                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:SVGAProtoShapeEntity_ShapeStyle_LineJoin_IsValidValue
-                              extraTextFormatInfo:extraTextFormatInfo];
-        if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
-            [worker release];
-        }
-    }
+        descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(SVGAProtoShapeEntity_ShapeStyle_LineJoin)
+                                                    valueNames:valueNames
+                                                        values:values
+                                                         count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                                  enumVerifier:SVGAProtoShapeEntity_ShapeStyle_LineJoin_IsValidValue
+                                           extraTextFormatInfo:extraTextFormatInfo];
+    });
     return descriptor;
 }
+
 
 BOOL SVGAProtoShapeEntity_ShapeStyle_LineJoin_IsValidValue(int32_t value__) {
     switch (value__) {
