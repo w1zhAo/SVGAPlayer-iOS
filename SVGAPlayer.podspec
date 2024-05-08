@@ -22,6 +22,14 @@ Pod::Spec.new do |s|
     ss.framework = "AVFoundation"
     ss.dependency 'SVGAPlayer/ProtoFiles'
   end
+  s.subspec 'Core' do |ss|
+    ss.source_files  = "Source/*.{h,m}"
+    ss.requires_arc = true
+    ss.dependency 'ReactiveObjC', '>= 3.1.0'
+    ss.library = "z"
+    ss.framework = "AVFoundation"
+    ss.dependency 'SVGAPlayer/ProtoFiles'
+  end
   s.subspec 'ProtoFiles' do |ss|
     ss.source_files  = "Source/pbobjc/*.{h,m}"
     ss.requires_arc = false
